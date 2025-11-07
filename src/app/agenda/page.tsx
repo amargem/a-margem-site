@@ -34,7 +34,7 @@ export default function AgendaPage({
   bgColor = "#5C1E0F",
   bgImage = "/padrao2.webp",
 }: AgendaPageProps) {
-  const [currentDate, setCurrentDate] = useState(new Date(2025, 9, 1));
+  const [currentDate, setCurrentDate] = useState(() => new Date());
   const [events, setEvents] = useState<EventItem[]>([]);
   const [loading, setLoading] = useState(true);
 
